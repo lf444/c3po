@@ -1,4 +1,7 @@
-export const computerURL = "http://localhost:8080/computeChanceOfarrival";
+export const computerURL =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:8080"
+    : "https://falcon-computer-nodejs.herokuapp.com";
 
 export interface Destination {
   destination: string;

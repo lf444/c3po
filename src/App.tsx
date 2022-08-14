@@ -38,7 +38,7 @@ function App() {
     setIsLoading(true);
 
     if (files) {
-      fetch(computerURL, {
+      fetch(computerURL + "/computeChanceOfarrival", {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
