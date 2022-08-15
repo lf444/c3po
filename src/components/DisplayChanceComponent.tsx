@@ -11,7 +11,8 @@ const DisplayChanceComponent: FunctionComponent<DisplaychanceProps> = ({
   const theme = useTheme();
   return (
     <>
-      {chancesOfArrival.path.length <= 0 ? (
+      <>
+        {" "}
         <Typography
           sx={{
             backgroundColor: theme.palette.secondary.main,
@@ -23,26 +24,9 @@ const DisplayChanceComponent: FunctionComponent<DisplaychanceProps> = ({
             ml: "1em",
           }}
         >
-          We have 0% of succes captain
+          We have {chancesOfArrival.percentOfSuccess}% of succes captain
         </Typography>
-      ) : (
-        <>
-          {" "}
-          <Typography
-            sx={{
-              backgroundColor: theme.palette.secondary.main,
-              width: "fit-content",
-              p: 1,
-              borderRadius: "10px",
-              height: "fit-content",
-              mt: "1em",
-              ml: "1em",
-            }}
-          >
-            We have {chancesOfArrival.percentOfSuccess}% of succes captain
-          </Typography>
-        </>
-      )}
+      </>
     </>
   );
 };

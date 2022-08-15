@@ -80,7 +80,7 @@ function App() {
             }}
           >
             {" "}
-            C3p0 i need our chance to arrive at endor !
+            goldenrod i need our chance to arrive at endor !
           </Typography>
           <CardMedia
             sx={{
@@ -149,17 +149,6 @@ function App() {
                   {" "}
                   TAKE IT C3po
                 </Button>
-                <IconButton
-                  onClick={resetAlldata}
-                  sx={{
-                    color: "#ffffff",
-                    ml: "0.5em",
-                    backgroundColor: theme.palette.text.secondary,
-                  }}
-                >
-                  {" "}
-                  <DeleteIcon />
-                </IconButton>
               </>
             )}
           </Box>
@@ -243,6 +232,146 @@ function App() {
                 {" "}
                 CRAP THE DATA IS CORRUPTED CAPTAIN !
               </Typography>
+            </>
+          ) : (
+            <></>
+          )}
+        </Grid>
+        <Grid item xs={12} sx={{ display: "flex" }}>
+          {chancesOfArrival && chancesOfArrival.percentOfSuccess === 0 ? (
+            <>
+              <Typography
+                sx={{
+                  backgroundColor: theme.palette.secondary.main,
+                  width: "fit-content",
+                  height: "fit-content",
+                  p: 1,
+                  borderRadius: "10px",
+                  marginLeft: "auto",
+                  marginRight: "1em",
+                  mt: "1em",
+                }}
+              >
+                {" "}
+                crap ! we were doomed
+                <Button
+                  onClick={resetAlldata}
+                  sx={{
+                    color: "#ffffff",
+                    backgroundColor: theme.palette.text.secondary,
+                    width: "fit-content",
+                    height: "fit-content",
+                    ml: "1em",
+                  }}
+                >
+                  {" "}
+                  we should rewind the data
+                </Button>
+              </Typography>
+
+              <CardMedia
+                sx={{
+                  height: "auto",
+                  width: "150px",
+                  marginRight: "0",
+                  borderRadius: "10px",
+                }}
+                component="img"
+                image={require("./assets/solo.jpg")}
+                alt="Paella dish"
+              />
+            </>
+          ) : chancesOfArrival && chancesOfArrival.percentOfSuccess < 100 ? (
+            <>
+              {" "}
+              <>
+                <Typography
+                  sx={{
+                    backgroundColor: theme.palette.secondary.main,
+                    width: "fit-content",
+                    height: "fit-content",
+                    p: 1,
+                    borderRadius: "10px",
+                    marginLeft: "auto",
+                    marginRight: "1em",
+                    mt: "1em",
+                  }}
+                >
+                  {" "}
+                  there is a chance should we go ?
+                  <Button
+                    onClick={resetAlldata}
+                    sx={{
+                      color: "#ffffff",
+                      backgroundColor: theme.palette.text.secondary,
+                      width: "fit-content",
+                      height: "fit-content",
+                      ml: "1em",
+                    }}
+                  >
+                    {" "}
+                    or rewind data ?
+                  </Button>
+                </Typography>
+
+                <CardMedia
+                  sx={{
+                    height: "auto",
+                    width: "150px",
+                    marginRight: "0",
+                    borderRadius: "10px",
+                  }}
+                  component="img"
+                  image={require("./assets/solo.jpg")}
+                  alt="Paella dish"
+                />
+              </>
+            </>
+          ) : chancesOfArrival && chancesOfArrival.percentOfSuccess === 100 ? (
+            <>
+              {" "}
+              <>
+                <Typography
+                  sx={{
+                    backgroundColor: theme.palette.secondary.main,
+                    width: "fit-content",
+                    height: "fit-content",
+                    p: 1,
+                    borderRadius: "10px",
+                    marginLeft: "auto",
+                    marginRight: "1em",
+                    mt: "1em",
+                  }}
+                >
+                  {" "}
+                  Never tell me the odds!
+                  <Button
+                    onClick={resetAlldata}
+                    sx={{
+                      color: "#ffffff",
+                      backgroundColor: theme.palette.text.secondary,
+                      width: "fit-content",
+                      height: "fit-content",
+                      ml: "1em",
+                    }}
+                  >
+                    {" "}
+                    activate hyperspace
+                  </Button>
+                </Typography>
+
+                <CardMedia
+                  sx={{
+                    height: "auto",
+                    width: "150px",
+                    marginRight: "0",
+                    borderRadius: "10px",
+                  }}
+                  component="img"
+                  image={require("./assets/solo.jpg")}
+                  alt="Paella dish"
+                />
+              </>
             </>
           ) : (
             <></>
